@@ -1,0 +1,43 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: .7em;
+}
+
+body {
+  width: 200px;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: .9em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 15%;
+}
+
+h3, .logo {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
