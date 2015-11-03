@@ -10,13 +10,13 @@ var page = {
   },
 
   initStyling: function () {
-    page.getReddits();
+    page.getWeather();
   },
 
   initEvents: function () {
   },
 
-  getReddits: function(){
+  getWeather: function(){
   $.ajax({
     url: 'http://api.wunderground.com/api/424d5cc3ad79524b/conditions/q/SC/Charleston.json',
     method: 'GET',
@@ -30,15 +30,12 @@ var page = {
         "Feels like: " + data.current_observation.feelslike_f + "&deg;</h2><br>");
         $('footer').append("<a href='http://www.wunderground.com/US/SC/Charleston.html'>Full Weather Report</a> <br><br>" +
         "<h3>Brought to you by <a href='http://www.wunderground.com'> Weather Underground <img src='" + data.current_observation.image.url +"' class='logo' /></a></h3>");
-
-          $(document).ready(function(){
-           $('footer').on('click', 'a', function(){
+        $('footer').on('click', 'a', function(){
              chrome.tabs.create({
                  url: $(this).attr('href')
                });
            });
-        });
-      }
-   })
- }
+       }
+    })
+  }
 };
